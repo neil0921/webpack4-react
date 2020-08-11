@@ -1,6 +1,7 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import dva from 'dva';
+import './index.less';
 // 1. Initialize
 const app = dva({});
 // app.use();
