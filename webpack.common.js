@@ -1,4 +1,5 @@
 const {resolve} = require('path');
+const WebpackBar = require('webpackbar');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -20,7 +21,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: resolve(__dirname, 'src'),
-        use: "babel-loader"
+        use: [
+          'thread-loader',// 开启多进程打包
+          "babel-loader?cacheDirectory"//?cacheDirectory 开启babel缓存
+        ]
       },
       {
         test: /\.(png|jpe?g|svg|gif)(\?.*)?$/,
@@ -29,7 +33,7 @@ module.exports = {
           options: {
             limit: 1024,
             outputPath: "static",
-            publicPath: "static/",
+            publicPath: "/static",
             name: "[name].[hash:8].[ext]"
           }
         }
@@ -41,7 +45,7 @@ module.exports = {
           options: {
             limit: 1024,
             outputPath: "static",
-            publicPath: "static/",
+            publicPath: "/static",
             name: "[name].[hash:8].[ext]"
           }
         }
@@ -49,10 +53,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new WebpackBar(),//编译进度
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/assets/favicon.ico"
     })
   ],
-  stats: 'errors-only'
+  stats: 'errors-only'//只打印webpack错误信息
 };

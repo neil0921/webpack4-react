@@ -5,9 +5,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const theme = require('./src/utils/theme.js');
 
+const commonCssLoader = [
+  MiniCssExtractPlugin.loader,
+  'css-loader',
+  'postcss-loader'
+];
+
 module.exports = merge(webpackCommon, {
   mode: "production",
-  // devtool: "source-map",
+  devtool: "source-map",
   output: {
     filename: "[name].[chunkhash:8].js",
     chunkFilename: "[name].[chunkhash:8].chunk.js",
@@ -16,14 +22,21 @@ module.exports = merge(webpackCommon, {
   module: {
     rules: [
       {
-        test: /\.(css|less)$/,
+        test: /\.css$/,
+        use: commonCssLoader
+      },
+      {
+        test: /\.less$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
+          ...commonCssLoader,
           {
             loader: 'less-loader',
-            options: {lessOptions: {'modifyVars': theme, 'javascriptEnabled': true}}//modifyVars:更改less 中的变量
+            options: {
+              lessOptions: {
+                'modifyVars': theme,//modifyVars:更改less 中的变量
+                'javascriptEnabled': true
+              }
+            }
           }
         ]
       }
