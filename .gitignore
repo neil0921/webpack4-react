@@ -1,10 +1,19 @@
-.DS_Store
-node_modules
+# 以斜杠/开头表示目录；
+# 以星号*通配多个字符；
+# 以问号?通配单个字符
+# 以方括号[]包含单个字符的匹配列表；
+# 以叹号!表示不忽略(跟踪)匹配到的文件或目录；
+# 注意： git 对于 .gitignore配置文件是按行从上到下进行规则匹配的
+# .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
+
+# dependencies  npm包文件
+/node_modules
+
+# production  打包文件
 /dist
 
-# local env files
-.env.local
-.env.*.local
+# misc
+.DS_Store
 
 # Log files
 npm-debug.log*
@@ -12,10 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw*
+/.idea
+/.vscode
