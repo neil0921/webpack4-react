@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint --ext .jsx --ext .js --fix ./src"
+    "lint": "eslint --fix --ext .jsx --ext .js ./src",
+    "precommit": "npm run lint"
   },
   "author": "Neil0921",
   "sideEffects": [

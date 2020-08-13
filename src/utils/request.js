@@ -10,7 +10,7 @@ function checkStatus(response) {
 }
 
 export const post = (url, params) => {
-  const _postData = params && params.body
+  const postData = params && params.body
     ? {
       body: params.data,
     }
@@ -23,7 +23,7 @@ export const post = (url, params) => {
     headers: {
       'content-type': 'application/json',
     },
-    ..._postData,
+    ...postData,
   })
     .then(checkStatus)
     .then(parseJSON)

@@ -1,4 +1,4 @@
-import { hot } from 'react-hot-loader/root';
+import {hot} from 'react-hot-loader/root'
 import React, { useState } from 'react';
 import { connect } from 'dva';
 import { ConfigProvider, Button } from 'antd';
