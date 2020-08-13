@@ -1,5 +1,5 @@
 module.exports = {
   common: {
-    no_data: 'No Data'
-  }
+    no_data: 'No Data',
+  },
 };

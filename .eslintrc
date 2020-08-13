@@ -1,0 +1,87 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "globals":{
+    "document": true,
+    "localStorage": true,
+    "window": true
+  },
+  "rules": {
+//    "arrow-parens": [//要求箭头函数的参数使用圆括号
+//      "error",
+//      "always"
+//    ],
+//    "arrow-body-style": [//要求箭头函数体使用大括号
+//      2,
+//      "as-needed"
+//    ],
+//    "comma-dangle": [//要求或禁止末尾逗号
+//      2,
+//      "always-multiline"
+//    ],
+//    "indent": 0,
+    "linebreak-style": [//强制使用一致的换行风格
+      "error",
+      "windows"
+    ],
+//    "no-tabs": 0,//禁用 tab
+//    "no-param-reassign": [//禁止对 function 的参数进行重新赋值
+//      "error",
+//      {
+//        "props": false
+//      }
+//    ],
+//    "no-constant-condition": [//禁止在条件中使用常量表达式
+//      "error",
+//      {
+//        "checkLoops": false
+//      }
+//    ],
+//    "object-shorthand": 0,//要求或禁止对象字面量中方法和属性使用简写语法
+    "no-unused-vars":[2, { "args": "none" }],//禁止出现未使用过的变量
+//    "import/imports-first": 0,
+//    "import/newline-after-import": 0,
+//    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+//    "import/no-named-as-default": 0,
+    "import/no-unresolved": 0,
+//    "import/prefer-default-export": 0,
+//    "import/extensions": 0,
+//    "jsx-a11y/aria-props": 2,
+//    "jsx-a11y/heading-has-content": 0,
+//    "jsx-a11y/href-no-hash": 2,
+//    "jsx-a11y/label-has-for": 2,
+//    "jsx-a11y/mouse-events-have-key-events": 2,
+//    "jsx-a11y/role-has-required-aria-props": 2,
+//    "jsx-a11y/role-supports-aria-props": 2,
+//    "max-len": 0,//强制一行的最大长度
+//    "newline-per-chained-call": 0,//要求方法链中每个调用都有一个换行符
+//    "no-console": 1,//禁用 console
+//    "no-use-before-define": 0,//禁止在变量定义之前使用它们
+//    "prefer-template": 2,//要求使用模板字面量而非字符串连接
+//    "class-methods-use-this": 0,//强制类方法使用 this
+//    "react/forbid-prop-types": 0,
+//    "react/jsx-first-prop-new-line": [
+//      2,
+//      "multiline"
+//    ],
+    "react/jsx-filename-extension": 0,
+//    "react/jsx-no-target-blank": 0,
+//    "react/require-extension": 0,
+//    "react/self-closing-comp": 0, //防止没有children的组件的额外结束标签
+//    "react/jsx-indent": [ //验证JSX中的props缩进
+//      2,
+//      "tab"
+//    ],
+//    "react/jsx-indent-props": [ //验证JSX中的props缩进
+//      2,
+//      "tab"
+//    ],
+//    "react/prefer-stateless-function": 0,
+//    "redux-saga/no-yield-in-race": 2,
+//    "redux-saga/yield-effects": 2,
+//    "require-yield": 0,
+    "react/prop-types": 0 //防止在React组件定义中丢失props验证
+//    "no-undef": 0,//禁用未声明的变量，除非它们在 /*global */ 注释中被提到
+//    "camelcase": 0//强制使用骆驼拼写法命名约定
+  }
+}

@@ -1,11 +1,11 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import dva from 'dva';
 import createLoading from 'dva-loading';
-import {createBrowserHistory as createHistory} from 'history';
+import { createBrowserHistory as createHistory } from 'history';
 import './index.less';
 // 1. Initialize
-const app = dva({history: createHistory()});
+const app = dva({ history: createHistory() });
 // app.use();
 // 2. Plugins
 app.use(createLoading());

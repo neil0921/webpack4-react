@@ -1,19 +1,19 @@
-const {merge} = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const webpackCommon = require('./webpack.common.js');
 const theme = require('./src/utils/theme.js');
 
 const commonCssLoader = [
-  "style-loader",
+  'style-loader',
   'css-loader',
   'postcss-loader'
 ];
 
 module.exports = merge(webpackCommon, {
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: 'development',
+  devtool: 'inline-source-map',
   output: {
-    filename: "[name].[hash:8].js",
-    publicPath: "/"
+    filename: '[name].[hash:8].js',
+    publicPath: '/'
   },
   devServer: {
     host: '0.0.0.0',
