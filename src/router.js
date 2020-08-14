@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
-import LayoutView from './LayoutView';
+import LayoutView from './routes/LayoutView';
 
 function RouterConfig({ history }) {
   return (

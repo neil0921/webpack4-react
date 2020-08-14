@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint --fix --ext .jsx --ext .js ./src"
   },
-  "author": "Neil0921",
+  "author": "neil0921",
   "sideEffects": [
     "*.css",
     "*.less"

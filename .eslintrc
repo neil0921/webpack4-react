@@ -14,41 +14,48 @@
   },
   "plugins": ["react"],
   "rules": {
-//    "arrow-parens": [//要求箭头函数的参数使用圆括号
-//      "error",
-//      "always"
-//    ],
-//    "arrow-body-style": [//要求箭头函数体使用大括号
-//      2,
-//      "as-needed"
-//    ],
-//    "comma-dangle": [//要求或禁止末尾逗号
-//      2,
-//      "always-multiline"
-//    ],
-//    "indent": 0,
-    "linebreak-style": [1, "windows"],//==强制使用一致的换行风格 结尾换行符，win用crlf，linux/unix用lf，mac用cr
-//    "no-tabs": 0,//禁用 tab
-//    "no-param-reassign": [//禁止对 function 的参数进行重新赋值
-//      "error",
-//      {
-//        "props": false
-//      }
-//    ],
-//    "no-constant-condition": [//禁止在条件中使用常量表达式
-//      "error",
-//      {
-//        "checkLoops": false
-//      }
-//    ],
-//    "object-shorthand": 0,//要求或禁止对象字面量中方法和属性使用简写语法
+    "linebreak-style": [0, "windows"],//关闭换行符操作系统格式问题
+    "quotes": 0,//一致地使用双引号或单引号
+    "semi": 1,//检查分号
+//    "indent": 0,// 禁止缩进错误
+//    "no-tabs": 0,// 关闭不允许使用 no-tabs
+    "no-console": 1,//检查console.log
+//    "no-underscore-dangle":0,// 设置不冲突 underscore 库
+//    "arrow-body-style": [2, "as-needed"],// 箭头函数直接返回的时候不需要 大括号 {}
+    "no-alert":2,//禁止出现alert
+//    "no-param-reassign": 0,// 设置是否可以重新改变参数的值
+//    "no-restricted-syntax": 0,// 允许使用 for in
+//    "guard-for-in": 0,
+//    "consistent-return":0,// 不需要每次都有返回
+//    "prefer-rest-params":0,// 允许使用 arguments
+//    "no-return-await":0,// 允许返回 await
+//    "no-use-before-define": 0,// 不必在使用前定义 函数
+//    "no-trailing-spaces": 0, // 允许代码后面空白
+    "object-curly-newline": 0,// 关闭大括号内的换行符要求
+    "jsx-quotes":0,//强制在 JSX 属性中一致地使用双引号或单引号
+//    "jsx-a11y/no-static-element-interactions":0,// 有一些 event 的时候，不需要 role 属性，不需要其他解释
+//    "jsx-a11y/click-events-have-key-events":0,
+//    "lines-between-class-members":0,// 类成员之间空行问题
+    "import/no-extraneous-dependencies": 0,// 不区分是否在 despendencies
+    "import/no-unresolved": 0,// 引用时候根据根目录基础 ~assets
+//    "react/destructuring-assignment": 0,// 关闭解构赋值报错
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],// 允许在 .js 和 .jsx 文件中使用  jsx
+//    "react/jsx-closing-bracket-location": [1, "after-props"],// jsx > 紧跟着属性
+//    "react/prefer-stateless-function": 0,// 不区分是否是 无状态组件
+    "react/prop-types": 0,// prop-types忽略children属性
+//    "react/forbid-prop-types": 0,// 关闭禁止prop-types类型
+//    "react/require-default-props":0, // 关闭default-props检查
     "no-unused-vars":1, //==出现未使用的变量
+    "react/jsx-tag-spacing":1,//在自动关闭的标签前加一个空格
+    "comma-dangle": 1 //要求或禁止末尾逗号
+
+//    "arrow-parens": ["error","always"],//要求箭头函数的参数使用圆括号
+//    "no-constant-condition": ["error",{"checkLoops": false}],//禁止在条件中使用常量表达式
+//    "object-shorthand": 0,//要求或禁止对象字面量中方法和属性使用简写语法
 //    "import/imports-first": 0,
 //    "import/newline-after-import": 0,
 //    "import/no-dynamic-require": 0,
-    "import/no-extraneous-dependencies": 0,//==
 //    "import/no-named-as-default": 0,
-    "import/no-unresolved": 0,//==
 //    "import/prefer-default-export": 0,
 //    "import/extensions": 0,
 //    "jsx-a11y/aria-props": 2,
@@ -60,33 +67,15 @@
 //    "jsx-a11y/role-supports-aria-props": 2,
 //    "max-len": 0,//强制一行的最大长度
 //    "newline-per-chained-call": 0,//要求方法链中每个调用都有一个换行符
-//    "no-console": 1,//禁用 console
-//    "no-use-before-define": 0,//禁止在变量定义之前使用它们
 //    "prefer-template": 2,//要求使用模板字面量而非字符串连接
 //    "class-methods-use-this": 0,//强制类方法使用 this
-//    "react/destructuring-assignment": [0, "always"],//关闭使用解构赋值的检测
-//    "react/forbid-prop-types": 0,
-//    "react/jsx-first-prop-new-line": [
-//      2,
-//      "multiline"
-//    ],
-    "react/jsx-filename-extension": 0,//==
+//    "react/jsx-first-prop-new-line": [2,"multiline"],
 //    "react/jsx-no-target-blank": 0,
 //    "react/require-extension": 0,
 //    "react/self-closing-comp": 0, //防止没有children的组件的额外结束标签
-//    "react/jsx-indent": [ //验证JSX中的props缩进
-//      2,
-//      "tab"
-//    ],
-//    "react/jsx-indent-props": [ //验证JSX中的props缩进
-//      2,
-//      "tab"
-//    ],
-//    "react/prefer-stateless-function": 0,
 //    "redux-saga/no-yield-in-race": 2,
 //    "redux-saga/yield-effects": 2,
 //    "require-yield": 0,
-    "react/prop-types": 0 //==防止在React组件定义中丢失props验证
 //    "no-undef": 0,//禁用未声明的变量，除非它们在 /*global */ 注释中被提到
 //    "camelcase": 0//强制使用骆驼拼写法命名约定
   }
