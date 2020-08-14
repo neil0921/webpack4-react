@@ -12,11 +12,11 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 const mapStateToProps = (state) => ({
-  localeLanguage: state.localeLanguage
+  localeLanguage: state.localeLanguage,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatch
+  dispatch,
 });
 
 function LayoutView({ dispatch, localeLanguage }) {
@@ -26,7 +26,7 @@ function LayoutView({ dispatch, localeLanguage }) {
     setFlage(!flag);
     dispatch({
       type: 'localeLanguage/changeLanguage',
-      payload: localeLanguage.lang === 'en' ? 'zh' : 'en'
+      payload: localeLanguage.lang === 'en' ? 'zh' : 'en',
     });
   };
 
